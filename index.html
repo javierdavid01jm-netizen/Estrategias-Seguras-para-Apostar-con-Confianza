@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Estrategias Seguras para Apostar</title>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<div id="root"></div>
+
+<script type="text/babel">
+// Estructura de módulos con submódulos desplegables
+const modules = [
+  {
+    title: "Módulo 1: Tiempo y Resultado",
+    content: [
+      { title: "Resultado exacto", details: ["Revisar goles promedio de ambos equipos y enfrentamientos directos", "Analizar tendencia a marcar goles altos o bajos", "Considerar localía y motivación del partido"] },
+      { title: "Resultado al descanso / final", details: ["Revisar qué equipo suele marcar primero", "Evaluar remontadas frecuentes en la segunda mitad"] },
+      { title: "Ambos equipos marcan (BTTS)", details: ["Solo apostar si ambos anotan regularmente", "Revisar defensa débil del rival y consistencia ofensiva del equipo"] },
+      { title: "Más/Menos de X goles", details: ["Revisar promedio de goles combinados", "Ajustar por lesiones de delanteros clave o defensas ausentes"] }
+      // ... agrega todos los submódulos que quieras
+    ]
+  },
+  {
+    title: "Módulo 2: Goles y Jugadores",
+    content: [
+      { title: "Goles de jugador específico", details: ["Revisar si juega los 90 min regularmente", "Priorizar delanteros y extremos titulares", "Revisar historial de goles contra rivales similares"] },
+      { title: "Disparos a puerta de jugador", details: ["Revisar que juegue los 90 min constantemente", "Priorizar jugadores que disparan dentro del área o de media distancia"] }
+    ]
+  }
+];
+
+function Module({ module }) {
+  const [openSubIndex, setOpenSubIndex] = React.useState(null);
+  const toggleSub = (index) => setOpenSubIndex(openSubIndex === index ? null : index);
+
+  return (
+    <div className="mb-4 border rounded shadow-sm overflow-hidden">
+      <button className="w-full flex justify-between items-center p-4 bg-blue-600 text-white font-semibold hover:bg-blue-700">
+        {module.title}
+      </button>
+      <div className="p-4 bg-gray-50 dark:bg-gray-800">
+        {module.content.map((sub, j) => (
+          <div key={j} className="mb-2 border-b">
+            <button
+              className="w-full text-left font-semibold py-1 hover:text-blue-700"
+              onClick={() => toggleSub(j)}
+            >
+              {sub.title} {openSubIndex === j ? "▲" : "▼"}
+            </button>
+            {openSubIndex === j && (
+              <ul className="pl-4 mt-1 list-disc text-gray-700 dark:text-gray-300">
+                {sub.details.map((detail, k) => (
+                  <li key={k}>{detail}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div className="p-6 max-w-5xl mx-auto font-sans min-h-screen">
+      <h1 className="text-3xl font-bold mb-2 text-center">Estrategias Seguras para Apostar con Confianza</h1>
+      <p className="text-center mb-6">Curso Profesional de Pronósticos de Fútbol</p>
+      {modules.map((mod, i) => (
+        <Module key={i} module={mod} />
+      ))}
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+</script>
+</body>
+</html>
 

@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Estrategias Seguras para Apostar</title>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<div id="root"></div>
+
+<script type="text/babel">
+
+// Módulos con submódulos desplegables
+const modules = [
+  {
+    title: "Introducción Profesional",
+    content: [
+      {
+        title: "Bienvenida",
+        details: [
+          "Bienvenido a esta guía avanzada de apuestas de fútbol.",
+          "Este curso ha sido diseñado para enseñarte cómo analizar partidos, jugadores y estadísticas con métodos profesionales, reducir riesgos y aumentar la probabilidad de éxito en tus pronósticos."
+        ]
+      },
+      {
+        title: "Objetivos",
+        details: [
+          "Evaluar partidos desde múltiples perspectivas: resultados, goles, jugadores y estadísticas.",
+          "Interpretar datos clave: tiros a puerta, córners, posesión, tarjetas y más.",
+          "Aplicar estrategias confiables en mercados comunes y especiales.",
+          "Construir apuestas combinadas y en vivo de manera profesional.",
+          "Este curso es útil tanto para principiantes como para profesionales."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Módulo 1: Tiempo y Resultado",
+    content: [
+      { title: "Resultado exacto", details: ["Revisar goles promedio de ambos equipos y enfrentamientos directos", "Analizar tendencia a marcar goles altos o bajos", "Considerar localía y motivación del partido"] },
+      { title: "Resultado al descanso / final", details: ["Revisar qué equipo suele marcar primero", "Evaluar remontadas frecuentes en la segunda mitad"] },
+      { title: "Ambos equipos marcan (BTTS)", details: ["Solo apostar si ambos anotan regularmente", "Revisar defensa débil del rival y consistencia ofensiva del equipo"] },
+      { title: "Más/Menos de X goles", details: ["Revisar promedio de goles combinados", "Ajustar por lesiones de delanteros clave o defensas ausentes"] },
+      { title: "Hándicap asiático", details: ["Analizar diferencia de nivel entre equipos", "Revisar historial de resultados con hándicap similar"] },
+      { title: "Hándicap europeo", details: ["Considerar posibilidad de empate", "Revisar forma reciente y desempeño contra rivales de nivel similar"] },
+      { title: "Doble oportunidad", details: ["Útil en partidos impredecibles", "Revisar consistencia defensiva del favorito"] },
+      { title: "Empate no apuesta", details: ["Proteger la apuesta si el favorito suele empatar o sufrir goles", "Revisar racha de victorias ajustadas y goles recibidos"] },
+      { title: "Primer / Último gol", details: ["Revisar qué jugador suele marcar primero y juega los 90 min", "Último gol → analizar capacidad de remontada del equipo"] },
+      { title: "Margen de victoria", details: ["Revisar diferencia promedio de goles y rendimiento ofensivo/defensivo", "Ajustar según motivación y rival"] },
+      { title: "Resultado correcto", details: ["Revisar resultados históricos similares", "Ajustar según tendencia de goles marcados/recibidos"] },
+      { title: "Tiempo reglamentario", details: ["Considerar solo goles en 90 minutos", "Evitar apuestas de tiempo extra o penales"] }
+    ]
+  },
+  {
+    title: "Módulo 2: Goles y Jugadores",
+    content: [
+      { title: "Goles de jugador específico", details: ["Revisar si juega los 90 min regularmente", "Priorizar delanteros y extremos titulares", "Revisar historial de goles contra rivales similares"] },
+      { title: "Goles exactos de jugador", details: ["Combinar minutos jugados y efectividad", "Solo apostar si el jugador tiene consistencia ofensiva"] },
+      { title: "Asistencias de jugador", details: ["Identificar jugadores que generan oportunidades", "Revisar si participa en jugadas claves regularmente"] },
+      { title: "Disparos a puerta de jugador", details: ["Revisar que juegue los 90 min constantemente", "Priorizar jugadores que disparan dentro del área o de media distancia"] },
+      { title: "Tarjetas de jugador", details: ["Revisar historial disciplinario y estilo de juego", "Partidos tensos → más probabilidad de amarillas"] },
+      { title: "Remates de esquina de jugador", details: ["Revisar quién lanza más córners y participa activamente en ataque"] }
+    ]
+  },
+  {
+    title: "Módulo 3: Estadísticas del Partido",
+    content: [
+      { title: "Tiros a puerta", details: ["Revisar promedio de tiros y consistencia del equipo", "Ajustar según defensa del rival"] },
+      { title: "Tiros fuera", details: ["Evaluar precisión del equipo", "Muchos tiros fuera → menor expectativa de gol"] },
+      { title: "Tiros bloqueados", details: ["Revisar defensa del rival y frecuencia de bloqueos", "Ajustar expectativa de BTTS o Más de 2.5 goles"] },
+      { title: "Tiros de esquina / Córners", details: ["Revisar promedio histórico de córners a favor y en contra", "Revisar ataques por banda y jugadores que lanzan córners"] },
+      { title: "Faltas cometidas / Faltas recibidas", details: ["Revisar estilo agresivo del equipo y árbitro", "Partidos tensos → más probabilidad de tarjetas"] },
+      { title: "Posesión de balón", details: ["Revisar control del juego y generación de oportunidades", "Equipos con alta posesión → más tiros a puerta"] },
+      { title: "Saque de banda / Saque de esquina / Saque de puerta", details: ["Revisar ataques por banda y presión ofensiva", "Más saques de esquina → probabilidad de gol por balón parado"] },
+      { title: "Tarjetas amarillas / rojas", details: ["Revisar agresividad, rivalidad y árbitro", "Equipos con historial de expulsiones → mayor riesgo"] },
+      { title: "Fuera de juego", details: ["Revisar intensidad ofensiva y línea defensiva rival", "Muchos fueras de juego → presión constante → más tiros a puerta"] },
+      { title: "Lesiones / Sustituciones", details: ["Revisar impacto de ausencias de jugadores clave", "Ajustar expectativas de goles y rendimiento ofensivo/defensivo"] },
+      { title: "Tiempo añadido", details: ["Revisar ritmo del partido, faltas y saques", "Más tiempo añadido → posibilidad de goles de último minuto"] }
+    ]
+  },
+  {
+    title: "Módulo 4: Apuestas Especiales y Combinadas",
+    content: [
+      { title: "Apuestas combinadas / Bet Builder / Acumulador / Sistema", details: ["Solo combinar mercados con alta probabilidad", "Revisar consistencia estadística antes de combinar", "Evitar mezclar apuestas arriesgadas con seguras"] },
+      { title: "Apuestas en vivo / Cash-out", details: ["Ajustar según estadísticas en tiempo real: tiros a puerta, posesión y córners", "Aprovechar cambios dinámicos en el partido para reducir riesgo"] }
+    ]
+  },
+  {
+    title: "Módulo 5: Tips Clave Profesionales y Ejemplos Reales",
+    content: [
+      { title: "Tips Profesionales", details: ["Prioriza jugadores titulares que juegan 90 minutos", "Evalúa tendencia histórica del equipo y jugador contra rivales similares", "Ajusta pronósticos según contexto: lesiones, clima, motivación y localía", "Usa estadísticas avanzadas (xG, tiros a puerta, córners) para calcular probabilidades", "Protege apuestas con hándicap, doble oportunidad o empate no apuesta", "Para combinadas, selecciona solo mercados con alta consistencia estadística"] }
+    ]
+  }
+];
+
+// Componente para los submódulos
+function SubModule({ sub }) {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <div className="mb-2 border-b">
+      <button
+        className="w-full text-left font-semibold py-1 hover:text-blue-700"
+        onClick={() => setOpen(!open)}
+      >
+        {sub.title} {open ? "▲" : "▼"}
+      </button>
+      {open && (
+        <ul className="pl-4 mt-1 list-disc text-gray-700 dark:text-gray-300">
+          {sub.details.map((d, i) => <li key={i}>{d}</li>)}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Componente para cada módulo
+function Module({ module }) {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <div className="mb-4 border rounded shadow-sm overflow-hidden">
+      <button
+        className="w-full flex justify-between items-center p-4 bg-blue-600 text-white font-semibold hover:bg-blue-700"
+        onClick={() => setOpen(!open)}
+      >
+        {module.title} {open ? "▲" : "▼"}
+      </button>
+      {open && (
+        <div className="p-4 bg-gray-50 dark:bg-gray-800">
+          {module.content.map((sub, j) => <SubModule key={j} sub={sub} />)}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Componente principal
+function App() {
+  return (
+    <div className="p-6 max-w-5xl mx-auto font-sans min-h-screen">
+      <h1 className="text-3xl font-bold mb-2 text-center">Estrategias Seguras para Apostar con Confianza</h1>
+      <p className="text-center mb-6">Curso Profesional de Pronósticos de Fútbol</p>
+      {modules.map((mod, i) => <Module key={i} module={mod} />)}
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+</script>
+</body>
+</html>
 

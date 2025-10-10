@@ -1,107 +1,137 @@
-{
-  title: "🧭 Módulo Especial: Manejo del Stake del 1 al 100",
-  content: [
-    {
-      title: "🎯 ¿Qué es el Stake 1–100?",
-      details: [
-        "El stake 1–100 es la escala moderna y más precisa para expresar el nivel de confianza en un pronóstico deportivo.",
-        "A diferencia del sistema 1–10, el stake representa porcentajes de seguridad (del 1% al 100%) sobre la apuesta analizada.",
-        "👉 En palabras simples: cuanto mayor sea el número, mayor es tu nivel de confianza en el pick, no tu inversión económica."
-      ]
-    },
-    {
-      title: "💡 Ventajas del sistema 1–100",
-      details: [
-        "Permite ajustes más finos entre niveles (ej. stake 52 vs. 58).",
-        "Refleja con mayor precisión la confianza real de un analista profesional.",
-        "Se integra fácilmente en modelos automáticos de análisis o value.",
-        "Es el estándar actual en comunidades avanzadas y plataformas de tipsters."
-      ]
-    },
-    {
-      title: "📊 Escala práctica de referencia",
-      details: [
-        "1–20 → Muy baja confianza (pick experimental o con cuota excesiva).",
-        "21–40 → Baja confianza (existe valor, pero la incertidumbre es alta).",
-        "41–60 → Media confianza (análisis sólido, riesgo moderado).",
-        "61–80 → Alta confianza (buen value, datos firmes, contexto favorable).",
-        "81–100 → Máxima confianza (respaldo estadístico, value alto, condiciones ideales).",
-        "📏 Consejo: la mayoría de tus picks deberían situarse entre 40 y 70. Los extremos (1–20 o 80–100) se reservan para casos excepcionales."
-      ]
-    },
-    {
-      title: "🧮 Cómo asignar el stake de forma objetiva",
-      details: [
-        "Usa un sistema cuantitativo con cuatro criterios medibles, cada uno con un valor máximo de 25 puntos (total 100).",
-        "Value: ¿La cuota ofrece una ventaja clara frente a la probabilidad real? (0–25)",
-        "Forma/Racha: ¿El rendimiento reciente respalda el pick? (0–25)",
-        "Contexto/Motivación: ¿Factores externos benefician el pick? (0–25)",
-        "Datos/Estadísticas: ¿Las métricas confirman el análisis? (0–25)",
-        "Ejemplo: 15 + 20 + 18 + 22 = 75/100 → Stake 75 (Alta confianza)."
-      ]
-    },
-    {
-      title: "🧾 Modelo de registro y evaluación",
-      details: [
-        "Registra tus pronósticos con esta estructura:",
-        "Fecha | Evento | Pronóstico | Cuota | Stake (1–100) | Resultado | Yield",
-        "Ejemplo:",
-        "09/10/25 | Arsenal vs Brighton | Over 2.5 goles | 1.85 | 72 | ✅ | +8%",
-        "10/10/25 | Porto vs Benfica | Doble oportunidad Benfica | 2.10 | 48 | ❌ | -5%",
-        "11/10/25 | Inter vs Milan | Ambos marcan | 1.75 | 83 | ✅ | +7%",
-        "Evalúa mensualmente: promedio de stake utilizado, % de acierto por rango (40–60, 60–80, etc.) y relación entre confianza y rentabilidad."
-      ]
-    },
-    {
-      title: "⚠️ Reglas clave para manejar el Stake 1–100",
-      details: [
-        "✅ Define tu escala una sola vez y no la modifiques según emociones.",
-        "✅ Usa el stake como lenguaje de confianza, no de dinero.",
-        "✅ Mantén coherencia: un stake 70 hoy debe valer igual mañana.",
-        "✅ No uses stake 100 salvo en picks con respaldo estadístico excepcional.",
-        "✅ Evalúa resultados por rangos, no solo pick por pick."
-      ]
-    },
-    {
-      title: "🧠 Ejemplo práctico",
-      details: [
-        "Evento: Real Sociedad vs Celta",
-        "Pronóstico: Over 1.5 goles",
-        "Cuota: 1.60",
-        "Value: 18 → Cuota justa 1.50 → value leve.",
-        "Forma: 22 → 7 de los últimos 8 partidos con +1.5 goles.",
-        "Contexto: 20 → Buen clima y titulares confirmados.",
-        "Datos: 24 → xG combinado alto (2.3).",
-        "Total: 84 → Stake 84 (Alta confianza)."
-      ]
-    },
-    {
-      title: "💬 Consejos para asesores y formadores",
-      details: [
-        "Enseña a distinguir análisis de emoción.",
-        "Usa colores o rangos visuales (verde = alta, amarillo = media, rojo = baja).",
-        "Promueve la honestidad analítica: no todos los picks superan 70.",
-        "Revisa la correlación entre stake y resultados cada mes.",
-        "Motiva a tus alumnos a definir su propio criterio, dentro de una estructura coherente."
-      ]
-    },
-    {
-      title: "💎 Filosofía del stake profesional",
-      details: [
-        "“El stake no mide cuánto apostamos, sino cuánto confiamos en lo que analizamos.”",
-        "El analista profesional se diferencia del apostador casual por:",
-        "📉 Su gestión del riesgo.",
-        "🔁 Su consistencia a largo plazo.",
-        "🧾 Su transparencia al comunicar confianza."
-      ]
-    },
-    {
-      title: "⚖️ Enfoque moderno: No arriesgar tanto y ser rentable",
-      details: [
-        "El éxito no proviene de apostar fuerte, sino de apostar con criterio.",
-        "Un stake moderado (como 10, 15 o 20 sobre 100) puede parecer bajo, pero es la clave de una rentabilidad constante y sostenible.",
-        "🎯 “El mejor tipster no es el que más gana en un día, sino el que sigue ganando año tras año gracias a su control.”"
-      ]
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estrategias Seguras para Apostar</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // Módulos con submódulos desplegables
+    const modules = [
+      {
+        title: "Introducción Profesional",
+        content: [
+          {
+            title: "Bienvenida",
+            details: [
+              "Bienvenido a esta guía avanzada de apuestas de fútbol.",
+              "Este curso ha sido diseñado para enseñarte cómo analizar partidos, jugadores y estadísticas con métodos profesionales, reducir riesgos y aumentar la probabilidad de éxito en tus pronósticos."
+            ]
+          },
+          {
+            title: "Objetivos",
+            details: [
+              "Evaluar partidos desde múltiples perspectivas: resultados, goles, jugadores y estadísticas.",
+              "Interpretar datos clave: tiros a puerta, córners, posesión, tarjetas y más.",
+              "Aplicar estrategias confiables en mercados comunes y especiales.",
+              "Construir apuestas combinadas y en vivo de manera profesional.",
+              "Este curso es útil tanto para principiantes como para profesionales."
+            ]
+          }
+        ]
+      },
+
+      {
+        title: "Módulo 1: Tiempo y Resultado",
+        content: [
+          { title: "Resultado exacto", details: ["Revisar goles promedio de ambos equipos y enfrentamientos directos", "Analizar tendencia a marcar goles altos o bajos", "Considerar localía y motivación del partido"] },
+          { title: "Resultado al descanso / final", details: ["Revisar qué equipo suele marcar primero", "Evaluar remontadas frecuentes en la segunda mitad"] },
+          { title: "Ambos equipos marcan (BTTS)", details: ["Solo apostar si ambos anotan regularmente", "Revisar defensa débil del rival y consistencia ofensiva del equipo"] },
+          { title: "Más/Menos de X goles", details: ["Revisar promedio de goles combinados", "Ajustar por lesiones de delanteros clave o defensas ausentes"] },
+          { title: "Hándicap asiático", details: ["Analizar diferencia de nivel entre equipos", "Revisar historial de resultados con hándicap similar"] },
+          { title: "Hándicap europeo", details: ["Considerar posibilidad de empate", "Revisar forma reciente y desempeño contra rivales de nivel similar"] },
+          { title: "Doble oportunidad", details: ["Útil en partidos impredecibles", "Revisar consistencia defensiva del favorito"] },
+          { title: "Empate no apuesta", details: ["Proteger la apuesta si el favorito suele empatar o sufrir goles", "Revisar racha de victorias ajustadas y goles recibidos"] },
+          { title: "Primer / Último gol", details: ["Revisar qué jugador suele marcar primero y juega los 90 min", "Último gol → analizar capacidad de remontada del equipo"] }
+        ]
+      },
+
+      {
+        title: "🧭 Módulo Especial: Manejo del Stake del 1 al 100",
+        content: [
+          {
+            title: "Concepto General",
+            details: [
+              "El stake es la unidad de confianza o intensidad con la que calificas cada pronóstico.",
+              "No representa dinero directamente, sino tu nivel de seguridad en la apuesta.",
+              "Usar un sistema del 1 al 100 permite una gestión más precisa y flexible."
+            ]
+          },
+          {
+            title: "Escala Profesional (1–100)",
+            details: [
+              "1–20: Pronósticos de baja confianza. Se recomienda evitar o apostar mínimo.",
+              "21–50: Valor medio. Ideal para picks con análisis sólido pero variables externas.",
+              "51–80: Alta confianza. Picks respaldados por datos consistentes y tendencia clara.",
+              "81–100: Máxima confianza. Solo para apuestas muy seguras, con análisis exhaustivo y mínimo margen de error."
+            ]
+          },
+          {
+            title: "Estrategia de Uso Responsable",
+            details: [
+              "El objetivo no es apostar más, sino **apostar mejor**.",
+              "Un apostador profesional rara vez supera el stake 10 o 15 sobre 100 en una sola jugada.",
+              "Usar stake bajo reduce la varianza y mantiene la rentabilidad estable a largo plazo.",
+              "La clave está en proteger el capital y construir beneficios sostenidos con control emocional."
+            ]
+          },
+          {
+            title: "Principio Central",
+            details: [
+              "📌 **No arriesgar tanto y ser rentable.**",
+              "El éxito no está en ganar cada día, sino en mantener una curva de crecimiento estable con gestión y análisis.",
+              "El stake refleja tu disciplina: cuanto más control, más profesional eres."
+            ]
+          }
+        ]
+      }
+    ];
+
+    // Componente de módulo interactivo
+    function Module({ module }) {
+      const [openIndex, setOpenIndex] = React.useState(null);
+      return (
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6">
+          <h2 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">{module.title}</h2>
+          {module.content.map((item, index) => (
+            <div key={index} className="mb-4">
+              <button
+                className="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100 hover:text-blue-500 transition"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                {item.title}
+              </button>
+              {openIndex === index && (
+                <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                  {item.details.map((d, i) => <li key={i}>{d}</li>)}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      );
     }
-  ]
-},
+
+    function App() {
+      return (
+        <div className="max-w-4xl mx-auto py-10 px-4">
+          <h1 className="text-4xl font-extrabold text-center mb-8 text-green-600 dark:text-green-400">
+            Estrategias Seguras para Apostar con Confianza
+          </h1>
+          {modules.map((m, i) => <Module key={i} module={m} />)}
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>

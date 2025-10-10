@@ -8,13 +8,24 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Pequeños ajustes para que el look sea idéntico al de tu captura */
+    body { background-color: #ffffff; }
+    .module-btn { background: #0ea5e9; } /* azul similar */
+    .module-btn:hover { background: #0284c7; }
+    .module-panel { background: #ffffff; }
+    .module-title { color: #ffffff; }
+    .sub-title { color: #0f172a; } /* texto oscuro para detalles */
+    .course-sub { color: #475569; }
+    .page { min-height: 100vh; padding-bottom: 40px; }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
+<body class="page">
   <div id="root"></div>
 
   <script type="text/babel">
-
+    // Contenido organizado exactamente en el orden que me enviaste
     const modules = [
       {
         title: "Introducción Profesional",
@@ -22,8 +33,7 @@
           {
             title: "Bienvenida",
             details: [
-              "Bienvenido a esta guía avanzada de apuestas de fútbol.",
-              "Este curso ha sido diseñado para enseñarte cómo analizar partidos, jugadores y estadísticas con métodos profesionales, reducir riesgos y aumentar la probabilidad de éxito en tus pronósticos."
+              "Bienvenido a esta guía avanzada de apuestas de fútbol. Este curso ha sido diseñado para enseñarte cómo analizar partidos, jugadores y estadísticas con métodos profesionales, reducir riesgos y aumentar la probabilidad de éxito en tus pronósticos."
             ]
           },
           {
@@ -33,81 +43,459 @@
               "Interpretar datos clave: tiros a puerta, córners, posesión, tarjetas y más.",
               "Aplicar estrategias confiables en mercados comunes y especiales.",
               "Construir apuestas combinadas y en vivo de manera profesional.",
-              "Este curso es útil tanto para principiantes como para profesionales."
+              "Este curso es útil tanto para principiantes que quieren aprender a apostar con seguridad como para profesionales que buscan sistematizar sus análisis."
             ]
           }
         ]
       },
+
+      {
+        title: "🧭 GUÍA PROFESIONAL: MANEJO DEL STAKE DEL 1 AL 100",
+        content: [
+          {
+            title: "🎯 1. ¿Qué es el Stake 1–100?",
+            details: [
+              "El stake 1–100 es la escala moderna y más precisa para expresar el nivel de confianza en un pronóstico deportivo.",
+              "A diferencia del antiguo sistema 1–10, aquí el stake representa porcentajes de seguridad (del 1% al 100%) sobre la apuesta analizada.",
+              "👉 En palabras simples: cuanto mayor sea el número, mayor es tu nivel de confianza en el pick, no tu inversión económica."
+            ]
+          },
+          {
+            title: "💡 2. Ventajas del sistema 1–100",
+            details: [
+              "Permite ajustes más finos entre niveles (ej. stake 52 vs. 58).",
+              "Refleja con mayor precisión la confianza real de un analista profesional.",
+              "Se integra fácilmente en modelos automáticos de análisis o value.",
+              "Es el estándar actual en comunidades avanzadas y plataformas de tipsters."
+            ]
+          },
+          {
+            title: "📊 3. Escala práctica de referencia",
+            details: [
+              "1–20 → Muy baja confianza (pick experimental o con cuota excesiva).",
+              "21–40 → Baja confianza (existe valor, pero la incertidumbre es alta).",
+              "41–60 → Media confianza (análisis sólido, riesgo moderado).",
+              "61–80 → Alta confianza (buen value, datos firmes, contexto favorable).",
+              "81–100 → Máxima confianza (respaldo estadístico, value alto, condiciones ideales).",
+              "📏 Consejo: la mayoría de tus picks deberían situarse entre 40 y 70. Los extremos (1–20 o 80–100) se reservan para casos excepcionales."
+            ]
+          },
+          {
+            title: "🧮 4. Cómo asignar el stake de forma objetiva",
+            details: [
+              "Usa un sistema cuantitativo con cuatro criterios medibles, cada uno con un valor máximo de 25 puntos (total 100):",
+              "Value: ¿La cuota ofrece una ventaja clara frente a la probabilidad real? (0–25).",
+              "Forma/Racha: ¿El rendimiento reciente respalda el pick? (0–25).",
+              "Contexto/Motivación: ¿Factores externos benefician el pick? (0–25).",
+              "Datos/Estadísticas: ¿Las métricas confirman el análisis? (0–25).",
+              "Ejemplo: 15 + 20 + 18 + 22 = 75/100 → Stake 75 (Alta confianza)."
+            ]
+          },
+          {
+            title: "🧾 5. Modelo de registro y evaluación",
+            details: [
+              "Fecha | Evento | Pronóstico | Cuota | Stake (1–100) | Resultado | Yield",
+              "09/10/25 | Arsenal vs Brighton | Over 2.5 goles | 1.85 | 72 | ✅ | +8%",
+              "10/10/25 | Porto vs Benfica | Doble oportunidad Benfica | 2.10 | 48 | ❌ | -5%",
+              "11/10/25 | Inter vs Milan | Ambos marcan | 1.75 | 83 | ✅ | +7%",
+              "Evalúa mensualmente: Promedio de stake utilizado; % de acierto por rango (40–60, 60–80, etc.); Relación entre confianza y rentabilidad."
+            ]
+          },
+          {
+            title: "⚠️ 6. Reglas clave",
+            details: [
+              "Define tu escala una sola vez y no la modifiques según emociones.",
+              "Usa el stake como lenguaje de confianza, no de dinero.",
+              "Mantén coherencia: un stake 70 hoy debe valer igual mañana.",
+              "No uses stake 100 salvo en picks con respaldo estadístico excepcional.",
+              "Evalúa resultados por rangos, no solo pick por pick."
+            ]
+          },
+          {
+            title: "🧠 7. Ejemplo práctico",
+            details: [
+              "Evento: Real Sociedad vs Celta",
+              "Pronóstico: Over 1.5 goles (Cuota: 1.60)",
+              "Value: 18 → Cuota justa 1.50 → value leve.",
+              "Forma: 22 → 7 de los últimos 8 partidos con +1.5 goles.",
+              "Contexto: 20 → Buen clima y titulares confirmados.",
+              "Datos: 24 → xG combinado alto (2.3).",
+              "Total: 84 → Stake 84 (Alta confianza)."
+            ]
+          },
+          {
+            title: "💬 8. Consejos para asesores y formadores",
+            details: [
+              "Enseña a distinguir análisis de emoción.",
+              "Usa colores o rangos visuales (verde = alta, amarillo = media, rojo = baja).",
+              "Promueve la honestidad analítica: no todos los picks superan 70.",
+              "Revisa la correlación entre stake y resultados cada mes.",
+              "Motiva a tus alumnos a definir su propio criterio, dentro de una estructura coherente."
+            ]
+          },
+          {
+            title: "💎 9. Filosofía del stake profesional",
+            details: [
+              "“El stake no mide cuánto apostamos, sino cuánto confiamos en lo que analizamos.”",
+              "El analista profesional se diferencia del apostador casual por:",
+              "• Su gestión del riesgo.",
+              "• Su consistencia a largo plazo.",
+              "• Su transparencia al comunicar confianza."
+            ]
+          },
+          {
+            title: "⚖️ 10. Enfoque moderno: No arriesgar tanto y ser rentable",
+            details: [
+              "El éxito no proviene de apostar fuerte, sino de apostar con criterio.",
+              "Un stake moderado (como 10, 15 o 20 sobre 100) puede parecer bajo, pero es la clave de una rentabilidad constante y sostenible.",
+              "🎯 “El mejor tipster no es el que más gana en un día, sino el que sigue ganando año tras año gracias a su control.”"
+            ]
+          }
+        ]
+      },
+
       {
         title: "Módulo 1: Tiempo y Resultado",
         content: [
-          { title: "Resultado exacto", details: ["Revisar goles promedio de ambos equipos y enfrentamientos directos", "Analizar tendencia a marcar goles altos o bajos", "Considerar localía y motivación del partido"] },
-          { title: "Resultado al descanso / final", details: ["Revisar qué equipo suele marcar primero", "Evaluar remontadas frecuentes en la segunda mitad"] },
-          { title: "Ambos equipos marcan (BTTS)", details: ["Solo apostar si ambos anotan regularmente", "Revisar defensa débil del rival y consistencia ofensiva del equipo"] },
-          { title: "Más/Menos de X goles", details: ["Revisar promedio de goles combinados", "Ajustar por lesiones de delanteros clave o defensas ausentes"] },
-          { title: "Hándicap asiático", details: ["Analizar diferencia de nivel entre equipos", "Revisar historial de resultados con hándicap similar"] },
-          { title: "Doble oportunidad", details: ["Útil en partidos impredecibles", "Revisar consistencia defensiva del favorito"] }
+          {
+            title: "Resultado exacto",
+            details: [
+              "Revisar goles promedio de ambos equipos y enfrentamientos directos.",
+              "Analizar tendencia a marcar goles altos o bajos.",
+              "Considerar localía y motivación del partido."
+            ]
+          },
+          {
+            title: "Resultado al descanso / final",
+            details: [
+              "Revisar qué equipo suele marcar primero.",
+              "Evaluar remontadas frecuentes en la segunda mitad."
+            ]
+          },
+          {
+            title: "Ambos equipos marcan (BTTS)",
+            details: [
+              "Solo apostar si ambos anotan regularmente.",
+              "Revisar defensa débil del rival y consistencia ofensiva del equipo."
+            ]
+          },
+          {
+            title: "Más/Menos de X goles",
+            details: [
+              "Revisar promedio de goles combinados.",
+              "Ajustar por lesiones de delanteros clave o defensas ausentes."
+            ]
+          },
+          {
+            title: "Hándicap asiático",
+            details: [
+              "Analizar diferencia de nivel entre equipos.",
+              "Revisar historial de resultados con hándicap similar."
+            ]
+          },
+          {
+            title: "Hándicap europeo",
+            details: [
+              "Considerar posibilidad de empate.",
+              "Revisar forma reciente y desempeño contra rivales de nivel similar."
+            ]
+          },
+          {
+            title: "Doble oportunidad",
+            details: [
+              "Útil en partidos impredecibles.",
+              "Revisar consistencia defensiva del favorito."
+            ]
+          },
+          {
+            title: "Empate no apuesta",
+            details: [
+              "Proteger la apuesta si el favorito suele empatar o sufrir goles.",
+              "Revisar racha de victorias ajustadas y goles recibidos."
+            ]
+          },
+          {
+            title: "Primer / Último gol",
+            details: [
+              "Revisar qué jugador suele marcar primero y juega los 90 min.",
+              "Último gol → analizar capacidad de remontada del equipo."
+            ]
+          },
+          {
+            title: "Margen de victoria",
+            details: [
+              "Revisar diferencia promedio de goles y rendimiento ofensivo/defensivo.",
+              "Ajustar según motivación y rival."
+            ]
+          },
+          {
+            title: "Resultado correcto",
+            details: [
+              "Revisar resultados históricos similares.",
+              "Ajustar según tendencia de goles marcados/recibidos."
+            ]
+          },
+          {
+            title: "Tiempo reglamentario",
+            details: [
+              "Considerar solo goles en 90 minutos.",
+              "Evitar apuestas de tiempo extra o penales."
+            ]
+          }
         ]
       },
+
       {
         title: "Módulo 2: Goles y Jugadores",
         content: [
-          { title: "Goles de jugador específico", details: ["Revisar si juega los 90 min regularmente", "Priorizar delanteros y extremos titulares", "Revisar historial de goles contra rivales similares"] },
-          { title: "Asistencias de jugador", details: ["Identificar jugadores que generan oportunidades", "Revisar si participa en jugadas claves regularmente"] },
-          { title: "Disparos a puerta de jugador", details: ["Revisar promedio de disparos", "Priorizar jugadores con alta efectividad"] }
+          {
+            title: "Goles de jugador específico",
+            details: [
+              "Revisar si juega los 90 min regularmente.",
+              "Priorizar delanteros y extremos titulares.",
+              "Revisar historial de goles contra rivales similares."
+            ]
+          },
+          {
+            title: "Goles exactos de jugador",
+            details: [
+              "Combinar minutos jugados y efectividad.",
+              "Solo apostar si el jugador tiene consistencia ofensiva."
+            ]
+          },
+          {
+            title: "Asistencias de jugador",
+            details: [
+              "Identificar jugadores que generan oportunidades.",
+              "Revisar si participa en jugadas claves regularmente."
+            ]
+          },
+          {
+            title: "Disparos a puerta de jugador",
+            details: [
+              "Revisar que juegue los 90 min constantemente.",
+              "Priorizar jugadores que disparan dentro del área o de media distancia."
+            ]
+          },
+          {
+            title: "Tarjetas de jugador",
+            details: [
+              "Revisar historial disciplinario y estilo de juego.",
+              "Partidos tensos → más probabilidad de amarillas."
+            ]
+          },
+          {
+            title: "Remates de esquina de jugador",
+            details: [
+              "Revisar quién lanza más córners y participa activamente en ataque."
+            ]
+          }
         ]
       },
+
       {
         title: "Módulo 3: Estadísticas del Partido",
         content: [
-          { title: "Tiros a puerta", details: ["Revisar promedio de tiros y consistencia del equipo", "Ajustar según defensa del rival"] },
-          { title: "Tiros fuera / bloqueados", details: ["Evaluar precisión del equipo y defensa del rival"] },
-          { title: "Córners", details: ["Revisar promedio histórico de córners a favor y en contra", "Analizar ataques por banda"] },
-          { title: "Tarjetas / Faltas", details: ["Revisar estilo del árbitro y rivalidad entre equipos"] }
+          {
+            title: "Tiros a puerta",
+            details: [
+              "Revisar promedio de tiros y consistencia del equipo.",
+              "Ajustar según defensa del rival."
+            ]
+          },
+          {
+            title: "Tiros fuera",
+            details: [
+              "Evaluar precisión del equipo.",
+              "Muchos tiros fuera → menor expectativa de gol."
+            ]
+          },
+          {
+            title: "Tiros bloqueados",
+            details: [
+              "Revisar defensa del rival y frecuencia de bloqueos.",
+              "Ajustar expectativa de BTTS o Más de 2.5 goles."
+            ]
+          },
+          {
+            title: "Tiros de esquina / Córners",
+            details: [
+              "Revisar promedio histórico de córners a favor y en contra.",
+              "Revisar ataques por banda y jugadores que lanzan córners."
+            ]
+          },
+          {
+            title: "Faltas cometidas / Faltas recibidas",
+            details: [
+              "Revisar estilo agresivo del equipo y árbitro.",
+              "Partidos tensos → más probabilidad de tarjetas."
+            ]
+          },
+          {
+            title: "Posesión de balón",
+            details: [
+              "Revisar control del juego y generación de oportunidades.",
+              "Equipos con alta posesión → más tiros a puerta."
+            ]
+          },
+          {
+            title: "Saque de banda / Saque de esquina / Saque de puerta",
+            details: [
+              "Revisar ataques por banda y presión ofensiva.",
+              "Más saques de esquina → probabilidad de gol por balón parado."
+            ]
+          },
+          {
+            title: "Tarjetas amarillas / rojas",
+            details: [
+              "Revisar agresividad, rivalidad y árbitro.",
+              "Equipos con historial de expulsiones → mayor riesgo."
+            ]
+          },
+          {
+            title: "Fuera de juego",
+            details: [
+              "Revisar intensidad ofensiva y línea defensiva rival.",
+              "Muchos fueras de juego → presión constante → más tiros a puerta."
+            ]
+          },
+          {
+            title: "Lesiones / Sustituciones",
+            details: [
+              "Revisar impacto de ausencias de jugadores clave.",
+              "Ajustar expectativas de goles y rendimiento ofensivo/defensivo."
+            ]
+          },
+          {
+            title: "Tiempo añadido",
+            details: [
+              "Revisar ritmo del partido, faltas y saques.",
+              "Más tiempo añadido → posibilidad de goles de último minuto."
+            ]
+          }
         ]
       },
+
       {
         title: "Módulo 4: Apuestas Especiales y Combinadas",
         content: [
-          { title: "Apuestas combinadas / Bet Builder / Acumulador / Sistema", details: ["Solo combinar mercados con alta probabilidad", "Revisar consistencia estadística antes de combinar", "Evitar mezclar apuestas arriesgadas con seguras"] },
-          { title: "Apuestas en vivo / Cash-out", details: ["Ajustar según estadísticas en tiempo real", "Aprovechar cambios dinámicos en el partido para reducir riesgo"] }
+          {
+            title: "Apuestas combinadas / Bet Builder / Acumulador / Sistema",
+            details: [
+              "Solo combinar mercados con alta probabilidad.",
+              "Revisar consistencia estadística antes de combinar.",
+              "Evitar mezclar apuestas arriesgadas con seguras."
+            ]
+          },
+          {
+            title: "Apuestas en vivo / Cash-out",
+            details: [
+              "Ajustar según estadísticas en tiempo real: tiros a puerta, posesión y córners.",
+              "Aprovechar cambios dinámicos en el partido para reducir riesgo."
+            ]
+          }
         ]
       },
+
       {
         title: "Módulo 5: Tips Clave Profesionales y Ejemplos Reales",
         content: [
-          { title: "Tips finales", details: ["Prioriza jugadores titulares", "Evalúa tendencia histórica del equipo y jugador", "Ajusta pronósticos según contexto y clima", "Usa estadísticas avanzadas (xG, tiros a puerta, córners)", "Protege apuestas con hándicap o doble oportunidad"] }
-        ]
-      },
-      {
-        title: "🧭 Módulo Especial: Manejo del Stake del 1 al 100",
-        content: [
-          { title: "¿Qué es el Stake 1–100?", details: ["Es una escala moderna para medir la confianza en tus pronósticos, no el dinero invertido.", "El número indica tu nivel de seguridad: cuanto más alto, más confianza en el análisis."] },
-          { title: "Escala de referencia", details: ["1–20 → Muy baja confianza", "21–40 → Baja confianza", "41–60 → Media confianza", "61–80 → Alta confianza", "81–100 → Máxima confianza"] },
-          { title: "Cómo asignar Stake objetivamente", details: ["Value (0–25)", "Forma/Racha (0–25)", "Contexto/Motivación (0–25)", "Datos/Estadísticas (0–25)", "Suma total define tu stake final."] },
-          { title: "Reglas profesionales", details: ["Usa el stake como medida de confianza, no de dinero.", "No uses stake 100 salvo en picks con respaldo excepcional.", "Sé coherente: un stake 70 hoy debe significar lo mismo mañana."] },
-          { title: "Enfoque moderno", details: ["No arriesgar tanto y ser rentable.", "El éxito viene de la constancia, no de apostar fuerte.", "Un stake bajo (10–20) mantiene estabilidad y control."] }
+          {
+            title: "Tiempo y Resultado - Ejemplos",
+            details: [
+              "Resultado exacto: Revisar goles promedio de ambos equipos, localía y motivación.",
+              "Ejemplo: Si el local marca 2 goles de media y recibe 1, y el visitante marca 1 y recibe 1, un resultado probable puede ser 2-1.",
+              "Resultado al descanso / final: Revisar quién suele marcar primero y remontadas frecuentes.",
+              "Ejemplo: Equipo A suele marcar primero y mantener ventaja → apostar a que gana al descanso.",
+              "BTTS: Solo si ambos equipos anotan regularmente y rival tiene defensa débil.",
+              "Ejemplo: Equipo A marca en 80% de partidos, Equipo B en 70% → BTTS probable.",
+              "Más/Menos de X goles: Ajustar promedio de goles según lesiones o forma reciente.",
+              "Ejemplo: Promedio combinado >2.5 goles, con delanteros titulares → apostar Más 2.5.",
+              "Hándicap asiático: Ajustar según nivel relativo y resultados históricos con hándicap.",
+              "Ejemplo: Favorito juega vs equipo más débil → apostar -0.75 para cubrir empate parcial.",
+              "Doble oportunidad / Empate no apuesta: Protege la apuesta en partidos impredecibles.",
+              "Ejemplo: Favorito con defensa sólida pero rival sorpresivo → doble oportunidad: local o empate.",
+              "Primer / Último gol: Revisar jugadores titulares que juegan 90 min.",
+              "Ejemplo: Delantero titular con promedio 0.6 goles/partido → probable primer gol."
+            ]
+          },
+          {
+            title: "Goles y Jugadores - Ejemplos",
+            details: [
+              "Goles de jugador específico: Solo titulares que juegan 90 min y con consistencia.",
+              "Ejemplo: Delantero titular marca 70% de partidos → apostar a que marca.",
+              "Disparos a puerta: Revisar promedio y participación ofensiva.",
+              "Ejemplo: Jugador con 4-5 tiros a puerta/partido → alta probabilidad de disparo.",
+              "Asistencias: Revisar jugadores que generan oportunidades regularmente.",
+              "Ejemplo: Mediocampista que participa en 60% de goles → apostar a asistencia.",
+              "Tarjetas de jugador: Revisar historial disciplinario y partidos tensos.",
+              "Ejemplo: Defensa agresivo en clásicos → alta probabilidad de amarilla.",
+              "Remates de esquina: Solo jugadores que ejecutan córners regularmente.",
+              "Ejemplo: Extremo que lanza 3-4 córners/partido → apostar remate de esquina."
+            ]
+          },
+          {
+            title: "Estadísticas del Partido - Ejemplos",
+            details: [
+              "Tiros a puerta / Tiros bloqueados / Tiros fuera: Revisar promedio y ajustarlo según defensa rival.",
+              "Ejemplo: Equipo A tiene 6 tiros a puerta/partido → expectativa alta de gol.",
+              "Córners / Saques: Revisar ataques por banda y presión ofensiva.",
+              "Ejemplo: Equipo con 7-8 córners/partido → apostar Más de 6.5 córners.",
+              "Posesión: Más posesión → más oportunidades de gol.",
+              "Ejemplo: Equipo con 65% de posesión → probable generar tiros y goles.",
+              "Faltas / Tarjetas: Considerar árbitro y rivalidad.",
+              "Ejemplo: Partidos tensos con historial de agresión → apostar más de 3.5 tarjetas.",
+              "Tiempo añadido: Ajustar expectativa de goles de último minuto.",
+              "Ejemplo: Partido con muchas faltas y saques → probabilidad de gol en 3-5 min extra."
+            ]
+          },
+          {
+            title: "Apuestas Especiales y Combinadas - Ejemplos",
+            details: [
+              "Bet Builder / Acumulador / Sistema: Solo combinar mercados con alta probabilidad y consistencia estadística.",
+              "Ejemplo: BTTS + Más 2.5 goles + primer gol de delantero titular → alta probabilidad.",
+              "Apuestas en vivo / Cash-out: Observar estadísticas en tiempo real: tiros, posesión, córners.",
+              "Ejemplo: Favorito pierde 0-1 pero domina con 70% posesión → apostar a remontada o cash-out si hay riesgo."
+            ]
+          },
+          {
+            title: "Tips Profesionales Finales",
+            details: [
+              "Prioriza jugadores titulares que juegan 90 minutos.",
+              "Evalúa tendencia histórica del equipo y jugador contra rivales similares.",
+              "Ajusta pronósticos según contexto: lesiones, clima, motivación y localía.",
+              "Usa estadísticas avanzadas (xG, tiros a puerta, córners) para calcular probabilidades.",
+              "Protege apuestas con hándicap, doble oportunidad o empate no apuesta.",
+              "Para combinadas, selecciona solo mercados con alta consistencia estadística."
+            ]
+          }
         ]
       }
     ];
 
+    /***** COMPONENTES VISUALES: MISMO ESTILO DE LA CAPTURA *****/
     const Module = ({ title, content }) => {
       const [open, setOpen] = React.useState(false);
       return (
-        <div className="mb-4">
-          <button onClick={() => setOpen(!open)} className="w-full bg-blue-600 text-white text-left px-4 py-3 rounded-md shadow-md font-semibold">
-            {title} {open ? "▲" : "▼"}
+        <div className="max-w-3xl mx-auto mb-6">
+          <button
+            onClick={() => setOpen(!open)}
+            className="module-btn w-full text-left text-white px-5 py-3 rounded-md shadow-md flex justify-between items-center"
+          >
+            <span className="font-semibold">{title}</span>
+            <span className="text-xl">{open ? "▲" : "▼"}</span>
           </button>
+
           {open && (
-            <div className="bg-white shadow-inner rounded-b-md">
-              {content.map((item, i) => (
-                <div key={i} className="border-t px-4 py-2">
-                  <button className="w-full text-left font-medium py-1">
-                    {item.title} ▼
+            <div className="module-panel border border-t-0 border-gray-200 p-4 rounded-b-md">
+              {content.map((item, idx) => (
+                <div key={idx} className="mb-4">
+                  <button className="w-full text-left sub-title font-semibold text-lg pb-1">
+                    {item.title}
                   </button>
-                  <ul className="list-disc list-inside text-gray-700 text-sm ml-4">
+                  <ul className="list-disc ml-6 text-gray-700">
                     {item.details.map((d, j) => (
-                      <li key={j}>{d}</li>
+                      <li key={j} className="py-0.5">{d}</li>
                     ))}
                   </ul>
                 </div>
@@ -118,15 +506,22 @@
       );
     };
 
-    const App = () => (
-      <div className="max-w-3xl mx-auto mt-8">
-        <h1 className="text-3xl font-bold text-center">Estrategias Seguras para Apostar con Confianza</h1>
-        <p className="text-center text-gray-600 mb-6">Curso Profesional de Pronósticos de Fútbol</p>
-        {modules.map((m, i) => (
-          <Module key={i} {...m} />
-        ))}
-      </div>
-    );
+    const App = () => {
+      return (
+        <div className="pt-10 pb-12">
+          <div className="max-w-3xl mx-auto text-center mb-6 px-4">
+            <h1 className="text-3xl font-bold text-gray-900 mb-1">Estrategias Seguras para Apostar con Confianza</h1>
+            <p className="course-sub">Curso Profesional de Pronósticos de Fútbol</p>
+            <hr className="my-6" />
+          </div>
+
+          {modules.map((m, i) => (
+            <Module key={i} title={m.title} content={m.content} />
+          ))}
+
+        </div>
+      );
+    };
 
     ReactDOM.render(<App />, document.getElementById("root"));
   </script>

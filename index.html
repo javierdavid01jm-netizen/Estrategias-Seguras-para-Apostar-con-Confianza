@@ -9,7 +9,6 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 </head>
-
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   <div id="root"></div>
 
@@ -38,100 +37,115 @@
           }
         ]
       },
-
       {
         title: "Módulo 1: Tiempo y Resultado",
         content: [
-          { title: "Resultado exacto", details: ["Revisar goles promedio de ambos equipos y enfrentamientos directos", "Analizar tendencia a marcar goles altos o bajos", "Considerar localía y motivación del partido"] },
-          { title: "Resultado al descanso / final", details: ["Revisar qué equipo suele marcar primero", "Evaluar remontadas frecuentes en la segunda mitad"] },
-          { title: "Ambos equipos marcan (BTTS)", details: ["Solo apostar si ambos anotan regularmente", "Revisar defensa débil del rival y consistencia ofensiva del equipo"] },
-          { title: "Más/Menos de X goles", details: ["Revisar promedio de goles combinados", "Ajustar por lesiones de delanteros clave o defensas ausentes"] },
-          { title: "Hándicap asiático", details: ["Analizar diferencia de nivel entre equipos", "Revisar historial de resultados con hándicap similar"] },
-          { title: "Hándicap europeo", details: ["Considerar posibilidad de empate", "Revisar forma reciente y desempeño contra rivales de nivel similar"] },
-          { title: "Doble oportunidad", details: ["Útil en partidos impredecibles", "Revisar consistencia defensiva del favorito"] },
-          { title: "Empate no apuesta", details: ["Proteger la apuesta si el favorito suele empatar o sufrir goles", "Revisar racha de victorias ajustadas y goles recibidos"] },
-          { title: "Primer / Último gol", details: ["Revisar qué jugador suele marcar primero y juega los 90 min", "Último gol → analizar capacidad de remontada del equipo"] }
-        ]
-      },
-
-      {
-        title: "🧭 Módulo Especial: Manejo del Stake del 1 al 100",
-        content: [
           {
-            title: "Concepto General",
+            title: "Resultado exacto",
             details: [
-              "El stake es la unidad de confianza o intensidad con la que calificas cada pronóstico.",
-              "No representa dinero directamente, sino tu nivel de seguridad en la apuesta.",
-              "Usar un sistema del 1 al 100 permite una gestión más precisa y flexible."
+              "Revisar goles promedio de ambos equipos y enfrentamientos directos",
+              "Analizar tendencia a marcar goles altos o bajos",
+              "Considerar localía y motivación del partido"
             ]
           },
           {
-            title: "Escala Profesional (1–100)",
+            title: "Resultado al descanso / final",
             details: [
-              "1–20: Pronósticos de baja confianza. Se recomienda evitar o apostar mínimo.",
-              "21–50: Valor medio. Ideal para picks con análisis sólido pero variables externas.",
-              "51–80: Alta confianza. Picks respaldados por datos consistentes y tendencia clara.",
-              "81–100: Máxima confianza. Solo para apuestas muy seguras, con análisis exhaustivo y mínimo margen de error."
+              "Revisar qué equipo suele marcar primero",
+              "Evaluar remontadas frecuentes en la segunda mitad"
             ]
           },
           {
-            title: "Estrategia de Uso Responsable",
+            title: "Ambos equipos marcan (BTTS)",
             details: [
-              "El objetivo no es apostar más, sino **apostar mejor**.",
-              "Un apostador profesional rara vez supera el stake 10 o 15 sobre 100 en una sola jugada.",
-              "Usar stake bajo reduce la varianza y mantiene la rentabilidad estable a largo plazo.",
-              "La clave está en proteger el capital y construir beneficios sostenidos con control emocional."
+              "Solo apostar si ambos anotan regularmente",
+              "Revisar defensa débil del rival y consistencia ofensiva del equipo"
             ]
           },
           {
-            title: "Principio Central",
+            title: "Más/Menos de X goles",
             details: [
-              "📌 **No arriesgar tanto y ser rentable.**",
-              "El éxito no está en ganar cada día, sino en mantener una curva de crecimiento estable con gestión y análisis.",
-              "El stake refleja tu disciplina: cuanto más control, más profesional eres."
+              "Revisar promedio de goles combinados",
+              "Ajustar por lesiones de delanteros clave o defensas ausentes"
+            ]
+          },
+          {
+            title: "Hándicap asiático",
+            details: [
+              "Analizar diferencia de nivel entre equipos",
+              "Revisar historial de resultados con hándicap similar"
+            ]
+          },
+          {
+            title: "Hándicap europeo",
+            details: [
+              "Considerar posibilidad de empate",
+              "Revisar forma reciente y desempeño contra rivales de nivel similar"
+            ]
+          },
+          {
+            title: "Doble oportunidad",
+            details: [
+              "Útil en partidos impredecibles",
+              "Revisar consistencia defensiva del favorito"
+            ]
+          },
+          {
+            title: "Empate no apuesta",
+            details: [
+              "Proteger la apuesta si el favorito suele empatar o sufrir goles",
+              "Revisar racha de victorias ajustadas y goles recibidos"
+            ]
+          },
+          {
+            title: "Primer / Último gol",
+            details: [
+              "Revisar qué jugador suele marcar primero y juega los 90 min",
+              "Último gol → analizar capacidad de remontada del equipo"
             ]
           }
         ]
       }
     ];
 
-    // Componente de módulo interactivo
-    function Module({ module }) {
-      const [openIndex, setOpenIndex] = React.useState(null);
+    function Module({ title, content }) {
+      const [open, setOpen] = React.useState(false);
       return (
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6">
-          <h2 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">{module.title}</h2>
-          {module.content.map((item, index) => (
-            <div key={index} className="mb-4">
-              <button
-                className="w-full text-left font-semibold text-lg text-gray-800 dark:text-gray-100 hover:text-blue-500 transition"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                {item.title}
-              </button>
-              {openIndex === index && (
-                <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                  {item.details.map((d, i) => <li key={i}>{d}</li>)}
-                </ul>
-              )}
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-4 mb-4 transition-all">
+          <button onClick={() => setOpen(!open)} className="w-full text-left text-xl font-bold flex justify-between items-center">
+            {title}
+            <span>{open ? "−" : "+"}</span>
+          </button>
+          {open && (
+            <div className="mt-3 space-y-3">
+              {content.map((sub, index) => (
+                <div key={index}>
+                  <h3 className="font-semibold text-lg">{sub.title}</h3>
+                  <ul className="list-disc ml-5 space-y-1">
+                    {sub.details.map((d, i) => (
+                      <li key={i}>{d}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
       );
     }
 
     function App() {
       return (
-        <div className="max-w-4xl mx-auto py-10 px-4">
-          <h1 className="text-4xl font-extrabold text-center mb-8 text-green-600 dark:text-green-400">
-            Estrategias Seguras para Apostar con Confianza
-          </h1>
-          {modules.map((m, i) => <Module key={i} module={m} />)}
+        <div className="max-w-3xl mx-auto p-6">
+          <h1 className="text-3xl font-bold text-center mb-8">⚽ Estrategias Seguras para Apostar</h1>
+          {modules.map((mod, i) => (
+            <Module key={i} title={mod.title} content={mod.content} />
+          ))}
         </div>
       );
     }
 
-    ReactDOM.render(<App />, document.getElementById('root'));
+    ReactDOM.render(<App />, document.getElementById("root"));
   </script>
 </body>
 </html>

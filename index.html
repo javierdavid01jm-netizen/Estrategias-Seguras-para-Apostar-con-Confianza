@@ -1,189 +1,743 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Apuestas Deportivas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Estrategias Seguras para Apostar con Confianza</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9fafb;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+    /* Estilo visual similar a tu referencia (azul vivo y cajas) */
+    :root{
+      --blue: #2563eb; /* azul vivo */
+      --blue-dark: #1e40af;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
     }
-    h1 {
-      text-align: center;
-      color: #111827;
-      font-size: 28px;
-      font-weight: bold;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px 16px;
+      display:flex;
+      justify-content:center;
     }
-    h2 {
-      text-align: center;
-      color: #374151;
-      font-size: 16px;
-      font-weight: normal;
-      margin-top: 4px;
-      margin-bottom: 20px;
+    .container{width:100%;max-width:980px}
+    h1{
+      text-align:center;
+      font-size:32px;
+      margin:6px 0 4px;
+      font-weight:800;
+      color:#071133;
     }
-    details {
-      width: 90%;
-      max-width: 800px;
-      margin-bottom: 10px;
-      background-color: white;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+    p.subtitle{
+      text-align:center;
+      color:#475569;
+      margin:0 0 18px;
     }
-    summary {
-      background-color: #2563eb;
-      color: white;
-      padding: 15px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      list-style: none;
+    details.module{
+      background:var(--card);
+      border-radius:8px;
+      margin:12px 0;
+      box-shadow:0 4px 10px rgba(15,23,42,0.06);
+      overflow:hidden;
+      border:1px solid rgba(2,6,23,0.04);
     }
-    summary::-webkit-details-marker {
-      display: none;
+    summary.module-summary{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      background:var(--blue);
+      color:#fff;
+      padding:14px 18px;
+      font-weight:700;
+      font-size:16px;
+      cursor:pointer;
     }
-    summary:after {
-      content: "▼";
-      float: right;
-      transition: transform 0.3s;
+    summary.module-summary::-webkit-details-marker{display:none}
+    summary.module-summary .arrow{transition:transform .25s ease}
+    details[open] summary.module-summary .arrow{transform:rotate(180deg)}
+    .module-body{background:var(--card); padding:14px 18px; color:var(--text); border-top:1px solid rgba(2,6,23,0.04)}
+    /* subdetails */
+    details.sub{
+      background:transparent;
+      margin:8px 0;
+      border-radius:6px;
+      overflow:hidden;
     }
-    details[open] summary:after {
-      transform: rotate(180deg);
+    summary.sub-summary{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      background:#f8fafc;
+      color:var(--text);
+      padding:10px 12px;
+      font-weight:600;
+      font-size:15px;
+      cursor:pointer;
+      border:1px solid rgba(2,6,23,0.04);
+      border-radius:6px;
     }
-    .content {
-      padding: 15px;
-      background-color: white;
-      color: #1f2937;
-      font-size: 15px;
-      line-height: 1.5;
-    }
-    .subdetails summary {
-      background-color: #f3f4f6;
-      color: #111827;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    .subdetails .content {
-      background-color: #f9fafb;
+    summary.sub-summary::-webkit-details-marker{display:none}
+    details[open] summary.sub-summary{background:#eef2ff}
+    .sub-body{padding:10px 14px; background:#fff; border-left:3px solid rgba(37,99,235,0.06); margin-top:6px; border-radius:6px}
+    ul{margin:8px 0 8px 20px}
+    li{margin:6px 0; line-height:1.45}
+    .small{font-size:13px;color:#475569}
+    @media (max-width:640px){
+      .container{padding:0 8px}
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Estrategias Seguras para Apostar con Confianza</h1>
+    <p class="subtitle">Curso Profesional de Pronósticos de Fútbol</p>
 
-  <h1>Estrategias Seguras para Apostar con Confianza</h1>
-  <h2>Curso Profesional de Pronósticos de Fútbol</h2>
+    <!-- INTRODUCCIÓN -->
+    <details class="module" open>
+      <summary class="module-summary">
+        Introducción Profesional <span class="arrow">▲</span>
+      </summary>
+      <div class="module-body">
+        <details class="sub" open>
+          <summary class="sub-summary">Bienvenida <span>▲</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Bienvenido a esta guía avanzada de apuestas de fútbol. Este curso ha sido diseñado para enseñarte cómo analizar partidos, jugadores y estadísticas con métodos profesionales, reducir riesgos y aumentar la probabilidad de éxito en tus pronósticos.</li>
+            </ul>
+          </div>
+        </details>
 
-  <!-- INTRODUCCIÓN -->
-  <details open>
-    <summary>Introducción Profesional</summary>
-    <div class="content">
-      <details class="subdetails" open>
-        <summary>Bienvenida</summary>
-        <div class="content">
-          <ul>
-            <li>Bienvenido a esta guía avanzada de apuestas de fútbol.</li>
-            <li>Este curso ha sido diseñado para enseñarte cómo analizar partidos, jugadores y estadísticas con métodos profesionales, reducir riesgos y aumentar la probabilidad de éxito en tus pronósticos.</li>
-          </ul>
-        </div>
-      </details>
-      <details class="subdetails">
-        <summary>Objetivos</summary>
-        <div class="content">
-          <ul>
-            <li>Aprender estrategias confiables.</li>
-            <li>Reducir riesgos con gestión inteligente.</li>
-            <li>Construir un sistema de apuestas sostenible.</li>
-          </ul>
-        </div>
-      </details>
-    </div>
-  </details>
+        <details class="sub">
+          <summary class="sub-summary">Objetivos <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Evaluar partidos desde múltiples perspectivas: resultados, goles, jugadores y estadísticas.</li>
+              <li>Interpretar datos clave: tiros a puerta, córners, posesión, tarjetas y más.</li>
+              <li>Aplicar estrategias confiables en mercados comunes y especiales.</li>
+              <li>Construir apuestas combinadas y en vivo de manera profesional.</li>
+              <li>Este curso es útil tanto para principiantes que quieren aprender a apostar con seguridad como para profesionales que buscan sistematizar sus análisis.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </details>
 
-  <!-- NUEVO MÓDULO -->
-  <details>
-    <summary>Módulo Extra: Manejo Profesional del Stake (1 al 100)</summary>
-    <div class="content">
-      <details class="subdetails" open>
-        <summary>Qué es el Stake</summary>
-        <div class="content">
-          El stake es la unidad que representa el nivel de confianza en tu pronóstico. Entre más alto el stake, mayor será el monto invertido y, por lo tanto, el riesgo asumido.
-        </div>
-      </details>
-      <details class="subdetails">
-        <summary>Escala de Confianza 1–100</summary>
-        <div class="content">
-          <ul>
-            <li>1–30 ➝ Baja confianza (apuestas conservadoras).</li>
-            <li>31–70 ➝ Media confianza (apuestas sólidas).</li>
-            <li>71–100 ➝ Alta confianza (sólo en análisis muy seguros).</li>
-          </ul>
-        </div>
-      </details>
-      <details class="subdetails">
-        <summary>Uso Recomendado</summary>
-        <div class="content">
-          <ul>
-            <li>Mantén la mayoría de tus apuestas con stake ≤ 10.</li>
-            <li>El objetivo no es “apostar más”, sino ser constante y rentable.</li>
-            <li>Evita subir el stake por impulsos o rachas.</li>
-          </ul>
-        </div>
-      </details>
-      <details class="subdetails">
-        <summary>Ejemplo Práctico</summary>
-        <div class="content">
-          Si tu banca es de $1,000 y tu stake base es de 1%, entonces:
-          <ul>
-            <li>Stake 10 = $100 (muy alto riesgo, usar poco).</li>
-            <li>Stake 5 = $50 (recomendado para apuestas seguras).</li>
-            <li>Stake 1 = $10 (perfecto para apuestas de bajo riesgo).</li>
-          </ul>
-        </div>
-      </details>
-    </div>
-  </details>
+    <!-- MÓDULO STAKE (insertado después de introducción) -->
+    <details class="module">
+      <summary class="module-summary">
+        🧭 GUÍA PROFESIONAL: MANEJO DEL STAKE DEL 1 AL 100 <span class="arrow">▼</span>
+      </summary>
+      <div class="module-body">
+        <!-- 1 -->
+        <details class="sub" open>
+          <summary class="sub-summary">1. ¿Qué es el Stake 1–100? <span>▲</span></summary>
+          <div class="sub-body">
+            <p>El <strong>stake 1–100</strong> es la escala moderna y más precisa para expresar el nivel de confianza en un pronóstico deportivo. A diferencia del antiguo sistema 1–10, aquí el stake representa porcentajes de seguridad (del 1% al 100%) sobre la apuesta analizada.</p>
+            <p class="small"><strong>En palabras simples:</strong> cuanto mayor sea el número, mayor es tu nivel de confianza en el pick —no tu inversión económica—.</p>
+          </div>
+        </details>
 
-  <!-- MÓDULOS ORIGINALES -->
-  <details>
-    <summary>Módulo 1: Tiempo y Resultado</summary>
-    <div class="content">
-      <!-- Contenido original -->
-    </div>
-  </details>
+        <!-- 2 -->
+        <details class="sub">
+          <summary class="sub-summary">2. Ventajas del sistema 1–100 <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Permite ajustes más finos entre niveles (ej. stake 52 vs 58).</li>
+              <li>Refleja con mayor precisión la confianza real de un analista profesional.</li>
+              <li>Se integra fácilmente en modelos automáticos de análisis o value.</li>
+              <li>Es el estándar actual en comunidades avanzadas y plataformas de tipsters.</li>
+            </ul>
+          </div>
+        </details>
 
-  <details>
-    <summary>Módulo 2: Goles y Jugadores</summary>
-    <div class="content">
-      <!-- Contenido original -->
-    </div>
-  </details>
+        <!-- 3 -->
+        <details class="sub">
+          <summary class="sub-summary">3. Escala práctica de referencia <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li><strong>1–20</strong> → Muy baja confianza (pick experimental o con cuota excesiva).</li>
+              <li><strong>21–40</strong> → Baja confianza (existe valor, pero la incertidumbre es alta).</li>
+              <li><strong>41–60</strong> → Media confianza (análisis sólido, riesgo moderado).</li>
+              <li><strong>61–80</strong> → Alta confianza (buen value, datos firmes, contexto favorable).</li>
+              <li><strong>81–100</strong> → Máxima confianza (respaldo estadístico, value alto, condiciones ideales).</li>
+            </ul>
+            <p class="small">Consejo: la mayoría de tus picks deberían situarse entre <strong>40 y 70</strong>. Los extremos (1–20 o 80–100) se reservan para casos excepcionales.</p>
+          </div>
+        </details>
 
-  <details>
-    <summary>Módulo 3: Estadísticas del Partido</summary>
-    <div class="content">
-      <!-- Contenido original -->
-    </div>
-  </details>
+        <!-- 4 -->
+        <details class="sub">
+          <summary class="sub-summary">4. Cómo asignar el stake de forma objetiva <span>▼</span></summary>
+          <div class="sub-body">
+            <p>Usa un sistema cuantitativo con cuatro criterios medibles, cada uno con un valor máximo de 25 puntos (total 100):</p>
+            <ul>
+              <li><strong>Value:</strong> ¿La cuota ofrece una ventaja clara frente a la probabilidad real? (0–25)</li>
+              <li><strong>Forma / Racha:</strong> ¿El rendimiento reciente respalda el pick? (0–25)</li>
+              <li><strong>Contexto / Motivación:</strong> ¿Factores externos benefician el pick? (0–25)</li>
+              <li><strong>Datos / Estadísticas:</strong> ¿Las métricas confirman el análisis? (0–25)</li>
+            </ul>
+            <p class="small">Ejemplo: 15 + 20 + 18 + 22 = 75/100 → Stake 75 (Alta confianza).</p>
+          </div>
+        </details>
 
-  <details>
-    <summary>Módulo 4: Apuestas Especiales y Combinadas</summary>
-    <div class="content">
-      <!-- Contenido original -->
-    </div>
-  </details>
+        <!-- 5 -->
+        <details class="sub">
+          <summary class="sub-summary">5. Modelo de registro y evaluación <span>▼</span></summary>
+          <div class="sub-body">
+            <p>Registra tus pronósticos con esta estructura:</p>
+            <p class="small"><strong>Fecha | Evento | Pronóstico | Cuota | Stake (1–100) | Resultado | Yield</strong></p>
+            <ul>
+              <li>09/10/25 | Arsenal vs Brighton | Over 2.5 goles | 1.85 | 72 | ✅ | +8%</li>
+              <li>10/10/25 | Porto vs Benfica | Doble oportunidad Benfica | 2.10 | 48 | ❌ | −5%</li>
+              <li>11/10/25 | Inter vs Milan | Ambos marcan | 1.75 | 83 | ✅ | +7%</li>
+            </ul>
+            <p class="small">Evalúa mensualmente: promedio de stake utilizado; % de acierto por rango (40–60, 60–80, etc.); relación entre confianza y rentabilidad.</p>
+          </div>
+        </details>
 
-  <details>
-    <summary>Módulo 5: Tips Clave Profesionales y Ejemplos Reales</summary>
-    <div class="content">
-      <!-- Contenido original -->
-    </div>
-  </details>
+        <!-- 6 -->
+        <details class="sub">
+          <summary class="sub-summary">6. Reglas clave para manejar el Stake 1–100 <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Define tu escala una sola vez y no la modifiques según emociones.</li>
+              <li>Usa el stake como lenguaje de confianza, no de dinero.</li>
+              <li>Mantén coherencia: un stake 70 hoy debe valer igual mañana.</li>
+              <li>No uses stake 100 salvo en picks con respaldo estadístico excepcional.</li>
+              <li>Evalúa resultados por rangos, no solo pick por pick.</li>
+            </ul>
+          </div>
+        </details>
 
+        <!-- 7 -->
+        <details class="sub">
+          <summary class="sub-summary">7. Ejemplo práctico <span>▼</span></summary>
+          <div class="sub-body">
+            <p><strong>Evento:</strong> Real Sociedad vs Celta</p>
+            <p><strong>Pronóstico:</strong> Over 1.5 goles — <strong>Cuota:</strong> 1.60</p>
+            <ul>
+              <li><strong>Value:</strong> 18 → Cuota justa 1.50 → value leve.</li>
+              <li><strong>Forma:</strong> 22 → 7 de los últimos 8 partidos con +1.5 goles.</li>
+              <li><strong>Contexto:</strong> 20 → Buen clima y titulares confirmados.</li>
+              <li><strong>Datos:</strong> 24 → xG combinado alto (2.3).</li>
+            </ul>
+            <p class="small">Total: 84 → Stake 84 (Alta confianza).</p>
+          </div>
+        </details>
+
+        <!-- 8 -->
+        <details class="sub">
+          <summary class="sub-summary">8. Consejos para asesores y formadores <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Enseña a distinguir análisis de emoción.</li>
+              <li>Usa colores o rangos visuales (verde = alta, amarillo = media, rojo = baja).</li>
+              <li>Promueve la honestidad analítica: no todos los picks superan 70.</li>
+              <li>Revisa la correlación entre stake y resultados cada mes.</li>
+              <li>Motiva a tus alumnos a definir su propio criterio, dentro de una estructura coherente.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 9 -->
+        <details class="sub">
+          <summary class="sub-summary">9. Filosofía del stake profesional <span>▼</span></summary>
+          <div class="sub-body">
+            <p>“El stake no mide cuánto apostamos, sino cuánto confiamos en lo que analizamos.”</p>
+            <ul>
+              <li>El analista profesional se diferencia del apostador casual por su gestión del riesgo.</li>
+              <li>Consistencia a largo plazo.</li>
+              <li>Transparencia al comunicar confianza.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 10 -->
+        <details class="sub">
+          <summary class="sub-summary">10. Enfoque moderno: No arriesgar tanto y ser rentable <span>▼</span></summary>
+          <div class="sub-body">
+            <p>El éxito no proviene de apostar fuerte, sino de apostar con criterio. Un stake moderado (como 10, 15 o 20 sobre 100) puede parecer bajo, pero es la clave de una rentabilidad constante y sostenible.</p>
+            <p class="small">“El mejor tipster no es el que más gana en un día, sino el que sigue ganando año tras año gracias a su control.”</p>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- MÓDULO 1: Tiempo y Resultado (completo) -->
+    <details class="module">
+      <summary class="module-summary">Módulo 1: Tiempo y Resultado <span class="arrow">▼</span></summary>
+      <div class="module-body">
+        <details class="sub" open>
+          <summary class="sub-summary">Resultado exacto <span>▲</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar goles promedio de ambos equipos y enfrentamientos directos.</li>
+              <li>Analizar tendencia a marcar goles altos o bajos.</li>
+              <li>Considerar localía y motivación del partido.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Resultado al descanso / final <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar qué equipo suele marcar primero.</li>
+              <li>Evaluar remontadas frecuentes en la segunda mitad.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Ambos equipos marcan (BTTS) <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Solo apostar si ambos anotan regularmente.</li>
+              <li>Revisar defensa débil del rival y consistencia ofensiva del equipo.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Más/Menos de X goles <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar promedio de goles combinados.</li>
+              <li>Ajustar por lesiones de delanteros clave o defensas ausentes.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Hándicap asiático <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Analizar diferencia de nivel entre equipos.</li>
+              <li>Revisar historial de resultados con hándicap similar.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Hándicap europeo <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Considerar posibilidad de empate.</li>
+              <li>Revisar forma reciente y desempeño contra rivales de nivel similar.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Doble oportunidad <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Útil en partidos impredecibles.</li>
+              <li>Revisar consistencia defensiva del favorito.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Empate no apuesta <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Proteger la apuesta si el favorito suele empatar o sufrir goles.</li>
+              <li>Revisar racha de victorias ajustadas y goles recibidos.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Primer / Último gol <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar qué jugador suele marcar primero y juega los 90 min.</li>
+              <li>Último gol → analizar capacidad de remontada del equipo.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Margen de victoria <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar diferencia promedio de goles y rendimiento ofensivo/defensivo.</li>
+              <li>Ajustar según motivación y rival.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Resultado correcto <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar resultados históricos similares.</li>
+              <li>Ajustar según tendencia de goles marcados/recibidos.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Tiempo reglamentario <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Considerar solo goles en 90 minutos.</li>
+              <li>Evitar apuestas de tiempo extra o penales.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <!-- MÓDULO 2 -->
+    <details class="module">
+      <summary class="module-summary">Módulo 2: Goles y Jugadores <span class="arrow">▼</span></summary>
+      <div class="module-body">
+        <details class="sub" open>
+          <summary class="sub-summary">Goles de jugador específico <span>▲</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar si juega los 90 min regularmente.</li>
+              <li>Priorizar delanteros y extremos titulares.</li>
+              <li>Revisar historial de goles contra rivales similares.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Goles exactos de jugador <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Combinar minutos jugados y efectividad.</li>
+              <li>Sólo apostar si el jugador tiene consistencia ofensiva.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Asistencias de jugador <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Identificar jugadores que generan oportunidades.</li>
+              <li>Revisar si participa en jugadas claves regularmente.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Disparos a puerta de jugador <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar que juegue los 90 min constantemente.</li>
+              <li>Priorizar jugadores que disparan dentro del área o de media distancia.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Tarjetas de jugador <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar historial disciplinario y estilo de juego.</li>
+              <li>Partidos tensos → más probabilidad de amarillas.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Remates de esquina de jugador <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar quién lanza más córners y participa activamente en ataque.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <!-- MÓDULO 3 -->
+    <details class="module">
+      <summary class="module-summary">Módulo 3: Estadísticas del Partido <span class="arrow">▼</span></summary>
+      <div class="module-body">
+        <details class="sub" open>
+          <summary class="sub-summary">Tiros a puerta <span>▲</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar promedio de tiros y consistencia del equipo.</li>
+              <li>Ajustar según defensa del rival.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Tiros fuera <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Evaluar precisión del equipo.</li>
+              <li>Muchos tiros fuera → menor expectativa de gol.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Tiros bloqueados <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar defensa del rival y frecuencia de bloqueos.</li>
+              <li>Ajustar expectativa de BTTS o Más de 2.5 goles.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Tiros de esquina / Córners <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar promedio histórico de córners a favor y en contra.</li>
+              <li>Revisar ataques por banda y jugadores que lanzan córners.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Faltas cometidas / Faltas recibidas <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar estilo agresivo del equipo y árbitro.</li>
+              <li>Partidos tensos → más probabilidad de tarjetas.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Posesión de balón <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar control del juego y generación de oportunidades.</li>
+              <li>Equipos con alta posesión → más tiros a puerta.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Saque de banda / Saque de esquina / Saque de puerta <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar ataques por banda y presión ofensiva.</li>
+              <li>Más saques de esquina → probabilidad de gol por balón parado.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Tarjetas amarillas / rojas <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar agresividad, rivalidad y árbitro.</li>
+              <li>Equipos con historial de expulsiones → mayor riesgo.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Fuera de juego <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar intensidad ofensiva y línea defensiva rival.</li>
+              <li>Muchos fueras de juego → presión constante → más tiros a puerta.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Lesiones / Sustituciones <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar impacto de ausencias de jugadores clave.</li>
+              <li>Ajustar expectativas de goles y rendimiento ofensivo/defensivo.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Tiempo añadido <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Revisar ritmo del partido, faltas y saques.</li>
+              <li>Más tiempo añadido → posibilidad de goles de último minuto.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <!-- MÓDULO 4 -->
+    <details class="module">
+      <summary class="module-summary">Módulo 4: Apuestas Especiales y Combinadas <span class="arrow">▼</span></summary>
+      <div class="module-body">
+        <details class="sub" open>
+          <summary class="sub-summary">Apuestas combinadas / Bet Builder / Acumulador / Sistema <span>▲</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Solo combinar mercados con alta probabilidad.</li>
+              <li>Revisar consistencia estadística antes de combinar.</li>
+              <li>Evitar mezclar apuestas arriesgadas con seguras.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Apuestas en vivo / Cash-out <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Ajustar según estadísticas en tiempo real: tiros a puerta, posesión y córners.</li>
+              <li>Aprovechar cambios dinámicos en el partido para reducir riesgo.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <!-- MÓDULO 5 -->
+    <details class="module">
+      <summary class="module-summary">Módulo 5: Tips Clave Profesionales y Ejemplos Reales <span class="arrow">▼</span></summary>
+      <div class="module-body">
+
+        <details class="sub" open>
+          <summary class="sub-summary">Tiempo y Resultado - Ejemplos <span>▲</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li><strong>Resultado exacto:</strong> Revisar goles promedio de ambos equipos, localía y motivación.
+                <ul>
+                  <li>Ejemplo: Si el local marca 2 goles de media y recibe 1, y el visitante marca 1 y recibe 1, un resultado probable puede ser 2-1.</li>
+                </ul>
+              </li>
+
+              <li><strong>Resultado al descanso / final:</strong> Revisar quién suele marcar primero y remontadas frecuentes.
+                <ul>
+                  <li>Ejemplo: Equipo A suele marcar primero y mantener ventaja → apostar a que gana al descanso.</li>
+                </ul>
+              </li>
+
+              <li><strong>BTTS:</strong> Solo si ambos equipos anotan regularmente y rival tiene defensa débil.
+                <ul>
+                  <li>Ejemplo: Equipo A marca en 80% de partidos, Equipo B en 70% → BTTS probable.</li>
+                </ul>
+              </li>
+
+              <li><strong>Más/Menos de X goles:</strong> Ajustar promedio de goles según lesiones o forma reciente.
+                <ul>
+                  <li>Ejemplo: Promedio combinado >2.5 goles, con delanteros titulares → apostar Más 2.5.</li>
+                </ul>
+              </li>
+
+              <li><strong>Hándicap asiático:</strong> Ajustar según nivel relativo y resultados históricos con hándicap.
+                <ul>
+                  <li>Ejemplo: Favorito juega vs equipo más débil → apostar -0.75 para cubrir empate parcial.</li>
+                </ul>
+              </li>
+
+              <li><strong>Doble oportunidad / Empate no apuesta:</strong> Protege la apuesta en partidos impredecibles.
+                <ul>
+                  <li>Ejemplo: Favorito con defensa sólida pero rival sorpresivo → doble oportunidad: local o empate.</li>
+                </ul>
+              </li>
+
+              <li><strong>Primer / Último gol:</strong> Revisar jugadores titulares que juegan 90 min.
+                <ul>
+                  <li>Ejemplo: Delantero titular con promedio 0.6 goles/partido → probable primer gol.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Goles y Jugadores - Ejemplos <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li><strong>Goles de jugador específico:</strong> Solo titulares que juegan 90 min y con consistencia.
+                <ul><li>Ejemplo: Delantero titular marca 70% de partidos → apostar a que marca.</li></ul>
+              </li>
+              <li><strong>Disparos a puerta:</strong> Revisar promedio y participación ofensiva.
+                <ul><li>Ejemplo: Jugador con 4-5 tiros a puerta/partido → alta probabilidad de disparo.</li></ul>
+              </li>
+              <li><strong>Asistencias:</strong> Revisar jugadores que generan oportunidades regularmente.
+                <ul><li>Ejemplo: Mediocampista que participa en 60% de goles → apostar a asistencia.</li></ul>
+              </li>
+              <li><strong>Tarjetas de jugador:</strong> Revisar historial disciplinario y partidos tensos.
+                <ul><li>Ejemplo: Defensa agresivo en clásicos → alta probabilidad de amarilla.</li></ul>
+              </li>
+              <li><strong>Remates de esquina:</strong> Solo jugadores que ejecutan córners regularmente.
+                <ul><li>Ejemplo: Extremo que lanza 3-4 córners/partido → apostar remate de esquina.</li></ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Estadísticas del Partido - Ejemplos <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li><strong>Tiros a puerta / Tiros bloqueados / Tiros fuera:</strong> Revisar promedio y ajustarlo según defensa rival.
+                <ul><li>Ejemplo: Equipo A tiene 6 tiros a puerta/partido → expectativa alta de gol.</li></ul>
+              </li>
+              <li><strong>Córners / Saques:</strong> Revisar ataques por banda y presión ofensiva.
+                <ul><li>Ejemplo: Equipo con 7-8 córners/partido → apostar Más de 6.5 córners.</li></ul>
+              </li>
+              <li><strong>Posesión de balón:</strong> Más posesión → más oportunidades de gol.
+                <ul><li>Ejemplo: Equipo con 65% de posesión → probable generar tiros y goles.</li></ul>
+              </li>
+              <li><strong>Faltas / Tarjetas:</strong> Considerar árbitro y rivalidad.
+                <ul><li>Ejemplo: Partidos tensos con historial de agresión → apostar más de 3.5 tarjetas.</li></ul>
+              </li>
+              <li><strong>Tiempo añadido:</strong> Ajustar expectativa de goles de último minuto.
+                <ul><li>Ejemplo: Partido con muchas faltas y saques → probabilidad de gol en 3-5 min extra.</li></ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Apuestas Especiales y Combinadas - Ejemplos <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li><strong>Bet Builder / Acumulador / Sistema:</strong> Solo combinar mercados con alta probabilidad y consistencia estadística.
+                <ul><li>Ejemplo: BTTS + Más 2.5 goles + primer gol de delantero titular → alta probabilidad.</li></ul>
+              </li>
+              <li><strong>Apuestas en vivo / Cash-out:</strong> Observar estadísticas en tiempo real: tiros, posesión, córners.
+                <ul><li>Ejemplo: Favorito pierde 0-1 pero domina con 70% posesión → apostar a remontada o cash-out si hay riesgo.</li></ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="sub">
+          <summary class="sub-summary">Tips Profesionales Finales <span>▼</span></summary>
+          <div class="sub-body">
+            <ul>
+              <li>Prioriza jugadores titulares que juegan 90 minutos.</li>
+              <li>Evalúa tendencia histórica del equipo y jugador contra rivales similares.</li>
+              <li>Ajusta pronósticos según contexto: lesiones, clima, motivación y localía.</li>
+              <li>Usa estadísticas avanzadas (xG, tiros a puerta, córners) para calcular probabilidades.</li>
+              <li>Protege apuestas con hándicap, doble oportunidad o empate no apuesta.</li>
+              <li>Para combinadas, selecciona solo mercados con alta consistencia estadística.</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+  </div>
 </body>
 </html>
